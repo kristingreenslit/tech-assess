@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TechAssess</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="header">
+	  <ul id="site-links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+      <li><a href="signin.html">Sign In</a></li>
+	</ul>
+</div>
+<div>
+    <h3 id="masthead">Tech Assess</h3>
+    <p> Tech Assess is an open source project that was built with the individual computer user in mind. A computer is a machine. Just like a car, it needs routine maintenance so that it can continue to run smoothly. However, with computers there is an additional benefit to performing routine maintenance. In many cases personal information could be better protected if individual computer users performed a few simple steps every once in a while.</p>
+</div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
