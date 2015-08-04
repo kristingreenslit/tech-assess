@@ -1,8 +1,9 @@
 class CreateComputers < ActiveRecord::Migration
   def change
     create_table :computers do |t|
-      t.string :name
-      t.references :user, index: true, foreign_key: true
+      t.belongs_to :user
+      t.text :body
+      t.timestamps null: false
     end
   end
 end

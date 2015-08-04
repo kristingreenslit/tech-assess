@@ -3,10 +3,24 @@ Rails.application.routes.draw do
   devise_for :users
   # root to: "home#index"
 # removed to install devise
-  resources :users do
-    resources :computers
+  # resources :users do
+  #   resources :computers
 
-end
+
+
+    # set up root route for devise to reroute to after successful login
+      root 'computers#index'
+
+      # alias user routes for account
+      devise_for :users, :path => 'accounts'
+
+      # next computer resource under user
+      resources :users do
+        resources :computers
+      end
+    end
+
+
     # resources :assessments
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -63,4 +77,3 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
