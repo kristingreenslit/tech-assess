@@ -4,4 +4,6 @@ class AssessmentsController < ApplicationController
     @assessments = Assessment.all
   end
 
+  
+
 end

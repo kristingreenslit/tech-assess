@@ -1,13 +1,12 @@
 class ComputersController < ApplicationController
 
   # before any computer action happens, it will authenticate the user
-  before_action :authenticate_user!
 
   # another devise helper method that retrieves the user object that has been authenticated
   def index
     @computers = current_user.computers
   end
-
+# !!! comment this back in after creating last two models!!!
   def show
     @computer = computer.find(params[:id])
   end

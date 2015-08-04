@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def show
     # @users = User.find(params[:id])
     # @user = User.create  #(whitelisted_post_params)
-    redirect_to computer_path(@computer)
+    # redirect_to user_assessment_path(@assessment)
   end
 
   # def sign_up

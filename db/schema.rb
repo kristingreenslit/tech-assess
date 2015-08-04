@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 20150804134510) do
   add_index "assessments", ["computer_id"], name: "index_assessments_on_computer_id", using: :btree
 
   create_table "computers", force: :cascade do |t|
-    t.string  "name"
-    t.integer "user_id"
+    t.integer  "user_id"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
-
-  add_index "computers", ["user_id"], name: "index_computers_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -49,5 +49,4 @@ ActiveRecord::Schema.define(version: 20150804134510) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "assessments", "computers"
-  add_foreign_key "computers", "users"
 end

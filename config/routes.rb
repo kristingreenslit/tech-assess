@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-  devise_for :users
   # root to: "home#index"
 # removed to install devise
   # resources :users do
@@ -9,7 +7,7 @@ Rails.application.routes.draw do
 
 
     # set up root route for devise to reroute to after successful login
-      root 'computers#index'
+      root 'home#index'
 
       # alias user routes for account
       devise_for :users, :path => 'accounts'
@@ -17,6 +15,7 @@ Rails.application.routes.draw do
       # next computer resource under user
       resources :users do
         resources :computers
+        resources :assessments
       end
     end
 
