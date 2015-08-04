@@ -1,11 +1,8 @@
-<h2>computers show page</h2>
+<h2>Computers Show Page</h2>
 
 <% @computers.each do |comment| %>
   <!-- <div> -->
-    <!-- <strong><%= computer.name %></strong> -->
+    <strong><%= computer.name %></strong>
     <%= link_to "New Computer", new_computer_path %>
-    <!-- <br /> -->
     <p><%= link_to 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %></p>
-  <!-- </div> -->
 <% end %>
-<!-- <%= render 'comments/form' %> -->
