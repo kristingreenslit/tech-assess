@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+// 
+// $(document).ready(function() {
+//   $('#start-button').click(function(event){
+//     console.log('Hooray!');
+//     event.preventDefault(); // Prevent link from following its href
+//   });
+// });

@@ -19,10 +19,10 @@ body {
  	padding: 0px;*/
  	font-family: "Droid Sans", sans-serif;
 }
- /*a:link {color:#666; text-decoration:none; display: block;}
+ a:link {color:#666; text-decoration:none; display: block;}
  a:visited {color:#666; text-decoration:none;}
  a:hover {color: #0098f0; text-decoration:none;}
- a:active {color:#666; text-decoration:none;}*/
+ a:active {color:#666; text-decoration:none;}
 
 h3 {
   font-size: 1.5em;
@@ -40,12 +40,6 @@ p {
   max-width: 960px;
   width: 60%;
   text-align: center;
-  /*color: white;*/
-}
-#masthead {
-}
-#header {
-    /*border: 1px solid red;*/
 }
 #nav {
   /*border: 1px solid orange;*/
@@ -68,10 +62,10 @@ p {
   padding: 9px 18px 9px;
   text-decoration: none;
 }
-#nav a:hover {
+/*#nav a:hover {*/
   /*background-color: #2D89E5;*/
-  color: #0098f0;
-}
+  /*color: #0098f0;
+}*/
 #button1 {
   /*border: 1px solid orange;*/
   max-width: 960px;
@@ -85,6 +79,7 @@ p {
   -webkit-font-smoothing: antialiased;
   font-family: helvetica, arial, sans-serif;
   font-weight: bold;
+  color: #0098f0;
   width: 135px;
   height: 20px;
   border: 1px solid #cbcbcb;

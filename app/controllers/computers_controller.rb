@@ -1,7 +1,11 @@
 class ComputersController < ApplicationController
 
-  def index
-    @computers = Computer.all
+
+
+  def show
+    @user = User.find(params[:id])
+    @computer = Computer.find(params[:id])
+    @computer = Computer.all
   end
 
 end

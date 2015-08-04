@@ -1,4 +1,8 @@
 class HomeController < ApplicationController
-  def index
+
+  def show
+    @user = User.new
+    redirect_to (computer_path(@computer))
   end
+
 end
