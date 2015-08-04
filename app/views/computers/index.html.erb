@@ -1,17 +1,19 @@
-<h2>computers index page</h2>
+<h1>computers index page</h1>
 
 <%= form_for([current_user, current_user.computers.build]) do |f| %>
   <p>
-    <%= f.label :body %><br>
-    <%= f.text_field :body %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
   </p>
   <p>
     <%= f.submit %>
   </p>
 <% end %>
 
-<ul>
-  <% @computers.each do |computer| %>
-  <li><%= computer.body %></li>
-  <% end %>
-</ul>
+<% @computers.each do |computer| %>
+  <!-- <div> -->
+  <ul>
+    <li><%= link_to computer.name %></li>
+  </ul>
+    <p><%= link_to 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<% end %>

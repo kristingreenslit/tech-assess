@@ -22,7 +22,7 @@ class ComputersController < ApplicationController
   def create
     @computer = current_user.computers.new(computer_params)
     if @computer.save
-      redirect_to @computer
+      # redirect_to @computer
     else render 'new'
     end
   end
@@ -41,9 +41,10 @@ class ComputersController < ApplicationController
     @computer.destroy
     redirect_to computers_path
     end
+
   private
   def computer_params
-    params.require(:user).permit(:body)
+    # params.require(:user).permit(:body)
   end
 end
 
