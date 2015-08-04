@@ -7,7 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div id="header">
+    <h3><a href="/home/<%= @home %>/index">TechAssess</a></h3>
+  	  <ul id="nav">
+  			<li><a href="/home/<%= @home %>/index">Home</a></li>
+  			<li><a href="about.html">About</a></li>
+  			<li><a href="contact.html">Contact</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+  	  </ul>
+  </div>
+  <p class="notice"><%= notice %></p> <!-- added per devise instructions -->
+  <p class="alert"><%= alert %></p> <!-- added per devise instructions -->
+  <h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3> <!-- added per devise instructions -->
 <%= yield %>
 
 </body>
