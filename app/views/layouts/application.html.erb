@@ -8,17 +8,21 @@
 </head>
 <body>
   <div id="header">
-    <h3><a href="/home/<%= @home %>/index">TechAssess</a></h3>
+    <h3><a href="/home/<%= @home %>/index">Welcome to TechAssess</a></h3>
+      </p>
   	  <ul id="nav">
-  			<li><a href="/home/<%= @home %>/index">Home</a></li>
+  			<li><a href="/">Home</a></li>
   			<li><a href="about.html">About</a></li>
   			<li><a href="contact.html">Contact</a></li>
-        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="/accounts/sign_in">Sign In</a></li>
+        <% if current_user %>
+          <li><%= link_to "Signout #{current_user.email}", destroy_user_session_path, :method => :delete %></li>
+        <% end %>
   	  </ul>
   </div>
   <p class="notice"><%= notice %></p> <!-- added per devise instructions -->
   <p class="alert"><%= alert %></p> <!-- added per devise instructions -->
-  <h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3> <!-- added per devise instructions -->
+   <!-- added per devise instructions -->
 <%= yield %>
 
 </body>
