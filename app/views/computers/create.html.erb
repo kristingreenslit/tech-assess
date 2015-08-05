@@ -1,11 +1,1 @@
 <h3>Create Computer Page</h3>
-
-<%= form_for([current_user, current_user.computers.build]) do |f| %>
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>

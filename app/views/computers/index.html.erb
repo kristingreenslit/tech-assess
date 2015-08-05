@@ -1,19 +1,20 @@
-<h1>computers index page</h1>
+<!-- <h4>computers index page</h4> -->
+<div id="comp-add">
+  <%= form_for([current_user, current_user.computers.build]) do |f| %>
+    <p>
+      <%= f.label :name, "Please enter a name for your computer: " %><br>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
 
-<%= form_for([current_user, current_user.computers.build]) do |f| %>
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-
-<% @computers.each do |computer| %>
-  <!-- <div> -->
-  <ul>
-    <li><%= link_to computer.name %></li>
-  </ul>
-    <p><%= link_to 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %></p>
-<% end %>
+  <% @computers.each do |computer| %>
+    <!-- <div> -->
+    <ul>
+      <li><%= link_to computer.name %></li>
+    </ul>
+      <p><%= link_to 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <% end %>
+</div>
