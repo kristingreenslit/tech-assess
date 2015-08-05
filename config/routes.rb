@@ -5,9 +5,7 @@ Rails.application.routes.draw do
   # alias user routes for account
   devise_for :users, :path => 'accounts'
 
-  # next computer resource under user
-  resources :users do
-    resources :computers
-    resources :assessments
-  end
+  resources :computers
+  resources :assessments
+
 end

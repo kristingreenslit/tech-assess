@@ -1,0 +1,10 @@
+
+  <%= form_for @computer do |f| %>
+    <p>
+      <%= f.label :name, "Please enter a name for your computer: " %><br>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>

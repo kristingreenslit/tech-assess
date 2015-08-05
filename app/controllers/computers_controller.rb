@@ -7,17 +7,15 @@ class ComputersController < ApplicationController
   #   @computers = current_user.computers
   # end
   def index
- @computers = Computer.where(user: current_user)
-end
+   @computers = current_user.computers
+  end
 
   def show
-    @user = User.find(params[:id])
-    @computer = Computer.find(params[:id])
-    @computer = Computer.all
+    @computer = current_user.computers.find(params[:id])
   end
 
   def new
-    @computer = computer.new
+    @computer = current_user.computers.build
   end
 
   def edit
@@ -25,15 +23,17 @@ end
   end
 
   def create
-    @computer = current_user.computers.new     #(computer_params)
-    @computer.save
-      # redirect_to @computer
-    # else render 'new'
-    # end
+    # fail params.inspect
+    @computer = current_user.computers.build(computer_params)
+    if @computer.save
+      redirect_to computers_url
+    else
+      render 'new'
+    end
   end
 
   def update
-    @computer = computer.find(params[:id])
+    @computer = current_user.computers.find(params[:id])
     if @computer.update(computer_params)
       redirect_to @computer
     else
@@ -49,7 +49,7 @@ end
 
   private
   def computer_params
-    # params.require(:user).permit(:body)
+    params.require(:computer).permit(:name)
   end
 end
 

@@ -1,19 +1,14 @@
-<h4>computers index page</h4>
+<!-- <h4>this page is views/computers/index.html.erb</h4>
+<h4>after user input the page incorrectly redirect to views/computers/create.html.erb</h4> -->
 
-  <%= form_for([current_user, current_user.computers.build]) do |f| %>
-    <p>
-      <%= f.label :name, "Please enter a name for your computer: " %><br>
-      <%= f.text_field :name %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
-  <% end %>
-
-  <%@computer.inspect%>
-
-
+<h1>Computers</h1>
+<%=link_to "new computer", new_computer_path %>
+<ul>
     <% @computers.each do |computer| %>
-      <%= link_to computer.name %> -->
-      <%= link_to 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %>
+      <li>
+          <%= link_to computer.name %>
+          |
+          <%= link_to 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %>
+      </li>
     <% end %>
+</ul>
