@@ -9,7 +9,7 @@ class ComputersController < ApplicationController
   def index
  @computers = Computer.where(user: current_user)
 end
-# !!! comment this back in after creating last two models!!!
+
   def show
     @user = User.find(params[:id])
     @computer = Computer.find(params[:id])
