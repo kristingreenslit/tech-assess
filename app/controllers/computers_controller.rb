@@ -3,12 +3,17 @@ class ComputersController < ApplicationController
   # before any computer action happens, it will authenticate the user
 
   # another devise helper method that retrieves the user object that has been authenticated
+  # def index
+  #   @computers = current_user.computers
+  # end
   def index
-    @computers = current_user.computers
-  end
+ @computers = Computer.where(user: current_user)
+end
 # !!! comment this back in after creating last two models!!!
   def show
-    @computer = computer.find(params[:id])
+    @user = User.find(params[:id])
+    @computer = Computer.find(params[:id])
+    @computer = Computer.all
   end
 
   def new
@@ -20,11 +25,11 @@ class ComputersController < ApplicationController
   end
 
   def create
-    @computer = current_user.computers.new(computer_params)
-    if @computer.save
+    @computer = current_user.computers.new     #(computer_params)
+    @computer.save
       # redirect_to @computer
-    else render 'new'
-    end
+    # else render 'new'
+    # end
   end
 
   def update
@@ -48,10 +53,6 @@ class ComputersController < ApplicationController
   end
 end
 
-#   def show
-#     @user = User.find(params[:id])
-#     @computer = Computer.find(params[:id])
-#     @computer = Computer.all
-#   end
+
 #
 # end

@@ -101,9 +101,11 @@ p {
   background-image:-webkit-linear-gradient(#fff, #f0f0f0);
 }
 
-#comp-add {
-
-}
+/*#comp-add {
+  length: 200px;
+  width: 200px;
+  margin: 0 auto;
+}*/
 
 #error_explanation {  /*all error_explanations are to style error messages in devise.en.yml*/
   width: 298px;
