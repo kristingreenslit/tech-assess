@@ -1,16 +1,19 @@
 <div class = "comp-list">
-<h4>My Computers</h4>
-
+<br>
 <ul>
     <% @computers.each do |computer| %>
       <li>
-          <%= link_to computer.name %>
+          <%= computer.name %>
           |
-          <%= link_to 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %>
-          <%= link_to 'Edit', edit_computer_path(computer.id) %>
+          <%= link_to 'Assess' %>
+          |
+          <%= link_to 'Edit' %>
+          |
+          <%= link_to 'Remove', method: :delete, data: { confirm: 'Are you sure?' } %>
       </li>
     <% end %>
 </ul>
 <br>
-<h4><%=link_to "Add a Computer", new_computer_path %></h4>
 </div>
+<br>
+<h4><%=link_to "Add a Computer", new_computer_path %></h4>

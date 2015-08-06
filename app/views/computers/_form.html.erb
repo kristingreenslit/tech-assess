@@ -1,16 +1,18 @@
-
+<div class="comp-form"><br>
   <%= form_for @computer do |f| %>
     <p>
       <%= f.label :name, "Please enter a name for your computer: " %><br>
       <%= f.text_field :name %>
     </p>
     <p>
-      <%= f.radio_button :computer_type, 'Mac?' %>
+      <%= f.radio_button :computer_type, 'Mac' %>
       <%= label :computer_type, 'Mac', :value => 'Mac' %>
-      <%= f.radio_button :computer_type, 'PC?' %>
+      <%= f.radio_button :computer_type, 'PC' %>
       <%= label :computer_type, 'PC', :value => 'PC' %>
     </p>
     <p>
       <%= f.submit %>
-    </p>
+    </p><br>
   <% end %>
+</div>
+  <h4><%=link_to "Back to My Assessments", computers_path %></h4>

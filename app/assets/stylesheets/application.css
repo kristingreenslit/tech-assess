@@ -9,10 +9,10 @@ li {
 body {
  	font-family: "Droid Sans", sans-serif;
 }
- a:link {color:#666; text-decoration:none;}
- a:visited {color:#666; text-decoration:none;}
+ a:link {color: #666; text-decoration:none;}
+ a:visited {color: #666; text-decoration:none;}
  a:hover {color: #3297FD; text-decoration:none;}
- a:active {color:#666; text-decoration:none;}
+ a:active {color: #3297FD; text-decoration:none;}
 
 h3 {
   /*border: 1px solid green;*/
@@ -47,10 +47,14 @@ h4 {
   padding-top: 10px;
   color: #666;
 }
-.comp-list {
+.comp-list, .comp-form {
+  /*border: 1px solid green;*/
   margin: 0 auto;
   text-align: center;
-  list-style: none;
+  /*list-style: none;*/
+  height: 100%;
+  width: 60%;
+  background-color: #efefef;
 }
 #assessments {
   margin: 0 auto;
