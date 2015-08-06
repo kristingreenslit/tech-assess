@@ -1,7 +1,5 @@
 class AssessmentsController < ApplicationController
-before_action :create, :assessment_params
-
-def index
+  def index
     @assessments = Assessment.all
   end
 
@@ -10,6 +8,7 @@ def index
     # e.g. /computers/5/assessments/new
     @computer = Computer.find(params[:computer_id])
     @assessment = @computer.assessments.build
+    render :new
   end
 
   def show
@@ -19,9 +18,15 @@ def index
   end
 
   def create
-    # params = { assessment: { name: 'foo', osversion: 'bar', ... }, ...}
+    # fail params.inspect
+    # params = { assessment: { osversion: '5' }, utf8: true, controller:'assessments' ...}
+    # Note: see example param above to understand why we...
+    
+    assessment_name = params[:assessment].keys.first
+    assessment_score = params[:assessment].values.first
+
     @computer = Computer.find(params[:computer_id])
-    @assessment = @computer.assessments.build(assessment_params)
+    @assessment = @computer.assessments.build(name: assessment_name, score: assessment_score)
     if @assessment.save
       redirect_to computer_path(@computer)
     else

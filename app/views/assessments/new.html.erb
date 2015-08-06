@@ -1,43 +1,42 @@
 <!-- <h4>this page is "assessments/index.html.erb"</h4> -->
 this is a new assessment
 
-<%= form_for [@computer, @assessment] do |f| %>
-  <p>
-    <%= f.label :name, "Please enter a name for your assessment: " %><br>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<div id="new_assessment">
+
+  <%= form_for [@computer, @assessment] do |f| %>
+
+    <h5>1. Which operating system is installed on your computer?</h5>
+    (<%= link_to " PC ", "http://windows.microsoft.com/en-us/windows/which-operating-system"%>
+      |<%= link_to " Mac ", "https://support.apple.com/en-us/HT201260"%>)
+      <br><br>
+      <select name="assessment[osversion]">
+          <option value="6">Windows 95</option>
+          <option value="5">Windows 98</option>
+          <option value="4">Windows XP</option>
+          <option value="3">Windows Vista</option>
+          <option value="2">Windows 7</option>
+          <option value="1">Windows 8</option>
+          <option value="0">Windows 10</option>
+          <option value="5">Max OS 10.5</option>
+          <option value="4">Max OS 10.6</option>
+          <option value="3">Max OS 10.7</option>
+          <option value="2">Max OS 10.8</option>
+          <option value="1">Max OS 10.9</option>
+          <option value="0">Max OS 10.10</option>
+      </select>
+    <p>
+      <%= f.submit %>
+    </p>
+    <br><br><br>
+  <% end %>
+
+</div>
+
 
 <!-- form below will be converted to form above using Rails conventions -->
 
-<div id="new_assessment">
-<form action="/assessments" method="post">  <!-- _form.asp is where to send the form data -->
-  <div class="mac-os">
-  <h5>1. Which operating system is installed on your computer?</h5>
-  (<%= link_to " PC ", "http://windows.microsoft.com/en-us/windows/which-operating-system"%>
-    |<%= link_to " Mac ", "https://support.apple.com/en-us/HT201260"%>)
-    <br><br>
-    <select name="osversion">
-        <option value="6">Windows 95</option>
-        <option value="5">Windows 98</option>
-        <option value="4">Windows XP</option>
-        <option value="3">Windows Vista</option>
-        <option value="2">Windows 7</option>
-        <option value="1">Windows 8</option>
-        <option value="0">Windows 10</option>
-        <option value="5">Max OS 10.5</option>
-        <option value="4">Max OS 10.6</option>
-        <option value="3">Max OS 10.7</option>
-        <option value="2">Max OS 10.8</option>
-        <option value="1">Max OS 10.9</option>
-        <option value="0">Max OS 10.10</option>
-    </select>
-  </div><br><br><br>
+<!--
 
-  <div class="mac-off">
   <h5>2. When was the last time your computer was powered off?</h5>
     <select name="shutoff">
         <option value="0">Within the past 24 hours</option>
@@ -47,7 +46,6 @@ this is a new assessment
         <option value="3">I'm not sure</option>
         <option value="5">I don't know how to turn off my computer</option>
     </select>
-  </div><br><br>
 
   <div class="mac-password">
   <h5>3. Does your computer have a login password?</h5>
@@ -105,4 +103,4 @@ this is a new assessment
   <input type="submit" value="Submit">
 </form><br><br>
 
-</div>
+ -->

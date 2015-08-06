@@ -1,12 +1,16 @@
 <h1> Computer: <%= @computer.name %></h1>
 
-<h2>Assessments</h2>
+<h2>
+  Assessments
+  <%= link_to "(+)", new_computer_assessment_path(@computer) %>
+</h2>
 
 <ul>
   <% assessments =  @computer.assessments %>
   <% assessments.each do |assessment| %>
     <li>
-        <%= assessment.name %>
+        <%= assessment.name %> |
+        <%= assessment.score %>
     </li>
   <% end %>
 </ul>
