@@ -5,7 +5,7 @@
       <li>
           <%= computer.name %>
           |
-          <%= link_to 'Assess', assessments_path %>
+          <%= link_to 'Assess', new_computer_assessment_path(computer) %>
           |
           <%= link_to 'Edit', edit_computer_path(computer) %>
           |

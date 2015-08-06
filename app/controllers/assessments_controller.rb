@@ -21,7 +21,7 @@ class AssessmentsController < ApplicationController
     # fail params.inspect
     # params = { assessment: { osversion: '5' }, utf8: true, controller:'assessments' ...}
     # Note: see example param above to understand why we...
-    
+
     assessment_name = params[:assessment].keys.first
     assessment_score = params[:assessment].values.first
 
