@@ -5,8 +5,7 @@ class ComputersController < ApplicationController
   end
 
   def show
-    # @computer = current_user.computers.find(computer_params)
-    @computer = computer_path
+    @computer = current_user.computers.find(params[:id])
   end
 
   def new

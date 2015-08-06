@@ -1,0 +1,12 @@
+<h1> Computer: <%= @computer.name %></h1>
+
+<h2>Assessments</h2>
+
+<ul>
+  <% assessments =  @computer.assessments %>
+  <% assessments.each do |assessment| %>
+    <li>
+        <%= assessment.name %>
+    </li>
+  <% end %>
+</ul>
