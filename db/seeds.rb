@@ -9,8 +9,11 @@
 Computer.destroy_all
 Assessment.destroy_all
 
-computer1 = user1.computers.create(name: "Jane's Apple II Computer")
-computer2 = user2.computers.create(name: "John's Apple III Computer")
+user1 = User.create!(email: "jane@jane.com", password: "password1")
+user2 = User.create!(email: "john@john.com", password: "password2")
+
+computer1 = user1.computers.create(name: "Jane's Apple II Computer", computer_type: "Mac")
+computer2 = user2.computers.create(name: "John's Thinkpad Computer", computer_type: "PC")
 
 computer1.assessments.create(name: "Jane's First Assessment")
 computer2.assessments.create(name: "John's Second Assessment")

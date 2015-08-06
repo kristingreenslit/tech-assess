@@ -5,6 +5,12 @@
       <%= f.text_field :name %>
     </p>
     <p>
+      <%= f.radio_button :computer_type, 'Mac?' %>
+      <%= label :computer_type, 'Mac', :value => 'Mac' %>
+      <%= f.radio_button :computer_type, 'PC?' %>
+      <%= label :computer_type, 'PC', :value => 'PC' %>
+    </p>
+    <p>
       <%= f.submit %>
     </p>
   <% end %>

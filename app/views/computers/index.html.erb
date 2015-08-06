@@ -1,14 +1,16 @@
-<!-- <h4>this page is views/computers/index.html.erb</h4>
-<h4>after user input the page incorrectly redirect to views/computers/create.html.erb</h4> -->
+<div class = "comp-list">
+<h4>My Computers</h4>
 
-<h1>Computers</h1>
-<%=link_to "new computer", new_computer_path %>
 <ul>
     <% @computers.each do |computer| %>
       <li>
           <%= link_to computer.name %>
           |
           <%= link_to 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Edit', edit_computer_path(computer.id) %>
       </li>
     <% end %>
 </ul>
+<br>
+<h4><%=link_to "Add a Computer", new_computer_path %></h4>
+</div>

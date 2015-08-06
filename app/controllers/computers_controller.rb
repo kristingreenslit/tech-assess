@@ -1,11 +1,5 @@
 class ComputersController < ApplicationController
 
-  # before any computer action happens, it will authenticate the user
-
-  # another devise helper method that retrieves the user object that has been authenticated
-  # def index
-  #   @computers = current_user.computers
-  # end
   def index
    @computers = current_user.computers
   end
@@ -19,7 +13,13 @@ class ComputersController < ApplicationController
   end
 
   def edit
-    @computer = computer.find(params[:id])
+    @computer = current_user.computers.find(params[:id])
+    # binding.pry
+    if @computer.update(computer_params)
+      redirect_to computers_url
+    else
+      render 'edit'
+    end
   end
 
   def create
@@ -32,25 +32,26 @@ class ComputersController < ApplicationController
     end
   end
 
-  def update
-    @computer = current_user.computers.find(params[:id])
-    if @computer.update(computer_params)
-      redirect_to @computer
-    else
-      render 'edit'
-    end
-	end
+  # def update
+  #   @computer = current_user.computers.find(params[:id])
+  #   if @computer.update(computer_params)
+  #     redirect_to computers_url
+  #   else
+  #     render 'edit'
+  #   end
+	# end
 
   def destroy
-    @computer = computer.find(params[:id])
+    # @computer = current_user.computers.find
     @computer.destroy
     redirect_to computers_path
     end
 
   private
   def computer_params
-    params.require(:computer).permit(:name)
+    params.require(:computer).permit(:name, :computer_type)
   end
+
 end
 
 

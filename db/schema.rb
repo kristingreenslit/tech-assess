@@ -26,8 +26,9 @@ ActiveRecord::Schema.define(version: 20150804166003) do
   create_table "computers", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "computer_type"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|
