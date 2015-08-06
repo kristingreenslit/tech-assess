@@ -16,11 +16,7 @@ class ComputersController < ApplicationController
   def edit
     @computer = current_user.computers.find(params[:id])
     # binding.pry
-    # if @computer.update(computer_params)
-    #   redirect_to computers_url
-    # else
-    #   render 'edit'
-    # end
+
   end
 
   def update
@@ -43,7 +39,7 @@ class ComputersController < ApplicationController
   end
 
   def destroy
-    # @computer = current_user.computers.find
+    @computer = current_user.computers.find(params[:id])
     @computer.destroy
     redirect_to computers_path
     end

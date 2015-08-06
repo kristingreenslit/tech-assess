@@ -1,18 +1,18 @@
 <div class = "comp-list">
 <br>
-<ul>
+  <ul>
     <% @computers.each do |computer| %>
       <li>
           <%= computer.name %>
           |
           <%= link_to 'Assess', assessments_path %>
           |
-          <%= link_to 'Edit', edit_computer_path(1) %>
+          <%= link_to 'Edit', edit_computer_path(computer) %>
           |
-          <%= link_to 'Remove', method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Remove', computer, method: :delete, data: { confirm: 'Are you sure?' } %>
       </li>
     <% end %>
-</ul>
+  </ul>
 <br>
 </div>
 <br>
