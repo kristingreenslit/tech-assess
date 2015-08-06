@@ -5,9 +5,9 @@
       <li>
           <%= computer.name %>
           |
-          <%= link_to 'Assess' %>
+          <%= link_to 'Assess', assessments_path %>
           |
-          <%= link_to 'Edit' %>
+          <%= link_to 'Edit', edit_computer_path(1) %>
           |
           <%= link_to 'Remove', method: :delete, data: { confirm: 'Are you sure?' } %>
       </li>

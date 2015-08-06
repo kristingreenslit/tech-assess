@@ -16,12 +16,21 @@ class ComputersController < ApplicationController
   def edit
     @computer = current_user.computers.find(params[:id])
     # binding.pry
+    # if @computer.update(computer_params)
+    #   redirect_to computers_url
+    # else
+    #   render 'edit'
+    # end
+  end
+
+  def update
+    @computer = current_user.computers.find(params[:id])
     if @computer.update(computer_params)
       redirect_to computers_url
     else
       render 'edit'
     end
-  end
+	end
 
   def create
     # fail params.inspect
@@ -32,15 +41,6 @@ class ComputersController < ApplicationController
       render 'new'
     end
   end
-
-  # def update
-  #   @computer = current_user.computers.find(params[:id])
-  #   if @computer.update(computer_params)
-  #     redirect_to computers_url
-  #   else
-  #     render 'edit'
-  #   end
-	# end
 
   def destroy
     # @computer = current_user.computers.find
