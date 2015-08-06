@@ -1,5 +1,7 @@
 <h1> Computer: <%= @computer.name %></h1>
 
+Score: <%= @computer.score %>
+
 <h2>
   Assessments
   <%= link_to "(+)", new_computer_assessment_path(@computer) %>

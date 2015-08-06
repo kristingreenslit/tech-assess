@@ -1,10 +1,12 @@
 class Computer < ActiveRecord::Base
   belongs_to :user
   has_many :assessments
-end
 
-def change
-	create_table :computers do |t|
-	t.references :computer
-end
+  def score
+    sum = 0
+    self.assessments.each do |assessment|
+      sum = sum + assessment.score.to_i
+    end
+    sum
+  end
 end
