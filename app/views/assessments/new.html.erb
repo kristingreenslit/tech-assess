@@ -1,13 +1,12 @@
-<!-- <h4>this page is "assessments/index.html.erb"</h4> -->
-this is a new assessment
+<h4>Computer Assessment</h4>
 
 <div id="new_assessment">
 
   <%= form_for [@computer, @assessment] do |f| %>
 
     <h5>1. Which operating system is installed on your computer?</h5>
-    (<%= link_to " PC ", "http://windows.microsoft.com/en-us/windows/which-operating-system"%>
-      |<%= link_to " Mac ", "https://support.apple.com/en-us/HT201260"%>)
+    (<%= link_to " PC ", "http://windows.microsoft.com/en-us/windows/which-operating-system", :target => "_blank" %>
+      |<%= link_to " Mac ", "https://support.apple.com/en-us/HT201260", :target => "_blank" %>)
       <br><br>
       <select name="assessment[osversion]">
           <option value="6">Windows 95</option>
@@ -27,80 +26,99 @@ this is a new assessment
     <p>
       <%= f.submit %>
     </p>
+    <br><br>
+  <% end %>
+
+  <%= form_for [@computer, @assessment] do |f| %>
+
+  <h5>2. When was the last time your computer was powered off?</h5>
+
+      <select name="assessment[shutoff]">
+           <option value="0">Within the past 24 hours</option>
+           <option value="0">Within the past week</option>
+           <option value="2">Within the past month</option>
+           <option value="3">Sometime this year</option>
+           <option value="3">I'm not sure</option>
+           <option value="5">I don't know how to turn off my computer</option>
+        </select>
+    <p>
+      <%= f.submit %>
+    </p>
+    <br><br>
+  <% end %>
+
+  <%= form_for [@computer, @assessment] do |f| %>
+
+      <h5>3. Does your computer have a login password?</h5>
+
+      <select name="assessment[pass]">
+          <option value="0">Yes</option>
+          <option value="5">No</option>
+          <option value="2">I'm not sure</option>
+          <option value="5">I don't know what a login password is</option>
+      </select>
+    <p>
+      <%= f.submit %>
+    </p>
+    <br><br>
+  <% end %>
+
+  <%= form_for [@computer, @assessment] do |f| %>
+
+    <h5>4. When was the last time you cleared your cookies?</h5>
+    (<%= link_to " ? ", "http://www.pctools.com/security-news/what-are-browser-cookies/", :target => "_blank"  %>)
+ <br><br>
+      <select name="assessment[cookies]">
+        <option value="0">Within the past 24 hours</option>
+            <option value="0">Within the past week</option>
+            <option value="1">Within the past month</option>
+            <option value="5">Sometime this year</option>
+            <option value="2">I'm not sure</option>
+            <option value="3">I don't know what a cookie is</option>
+      </select>
+    <p>
+      <%= f.submit %>
+    </p>
+    <br><br>
+  <% end %>
+
+  <%= form_for [@computer, @assessment] do |f| %>
+
+    <h5>5. When was the last time you backed up the data on your computer?</h5>
+    (<%= link_to " PC ", "https://support.microsoft.com/en-us/kb/971759", :target => "_blank" %>
+        |<%= link_to " Mac ", "https://www.apple.com/support/backup/", :target => "_blank" %>)
+      <br><br>
+      <select name="assessment[backups]">
+          <option value="0">Within the past 24 hours</option>
+          <option value="0">Within the past week</option>
+          <option value="1">Within the past month</option>
+          <option value="2">Sometime this year</option>
+          <option value="3">I'm not sure</option>
+          <option value="5">I don't know how to back up my data</option>
+        </select>
+    <p>
+      <%= f.submit %>
+    </p>
+    <br><br>
+  <% end %>
+
+  <%= form_for [@computer, @assessment] do |f| %>
+
+     <h5>6. Do you always use a wifi network that's password-protected?</h5>
+     (<%= link_to " PC ", "http://windows.microsoft.com/en-us/windows/know-wireless-network-secure#1TC=windows-7", :target => "_blank" %>
+        |<%= link_to " Mac ", "https://support.apple.com/en-us/HT204070", :target => "_blank" %>)
+      <br><br>
+      <select name="assessment[wifi]">
+          <option value="0">Yes</option>
+          <option value="3">No</option>
+          <option value="2">I'm not sure</option>
+          <option value="2">I Use Dial-Up or an Ethernet Cord</option>
+          <option value="2">I don't know what wifi is</option>
+        </select>
+    <p>
+      <%= f.submit %>
+    </p>
     <br><br><br>
   <% end %>
 
 </div>
-
-
-<!-- form below will be converted to form above using Rails conventions -->
-
-<!--
-
-  <h5>2. When was the last time your computer was powered off?</h5>
-    <select name="shutoff">
-        <option value="0">Within the past 24 hours</option>
-        <option value="0">Within the past week</option>
-        <option value="2">Within the past month</option>
-        <option value="3">Sometime this year</option>
-        <option value="3">I'm not sure</option>
-        <option value="5">I don't know how to turn off my computer</option>
-    </select>
-
-  <div class="mac-password">
-  <h5>3. Does your computer have a login password?</h5>
-    <select name="pass">
-        <option value="0">Yes</option>
-        <option value="5">No</option>
-        <option value="2">I'm not sure</option>
-        <option value="5">I don't know what a login password is</option>
-    </select>
-  </div><br><br>
-
-  <div class="mac-cookies">
-  <h5>4. When was the last time you cleared your cookies?</h5>
-  (<%= link_to " ? ", "http://www.pctools.com/security-news/what-are-browser-cookies/" %>)
-  <br><br>
-    <select name="cookies">
-      <option value="0">Within the past 24 hours</option>
-      <option value="0">Within the past week</option>
-      <option value="1">Within the past month</option>
-      <option value="5">Sometime this year</option>
-      <option value="2">I'm not sure</option>
-      <option value="3">I don't know what a cookie is</option>
-    </select>
-  </div><br><br><br>
-
-  <div class="mac-backups">
-  <h5>5. When was the last time you backed up the data on your computer?</h5>
-  (<%= link_to " PC ", "https://support.microsoft.com/en-us/kb/971759"%>
-    |<%= link_to " Mac ", "https://www.apple.com/support/backup/"%>)
-  <br><br>
-    <select name="backups">
-      <option value="0">Within the past 24 hours</option>
-      <option value="0">Within the past week</option>
-      <option value="1">Within the past month</option>
-      <option value="2">Sometime this year</option>
-      <option value="3">I'm not sure</option>
-      <option value="5">I don't know how to back up my data</option>
-    </select>
-  </div><br><br><br><br>
-
-  <div class="mac-wifi">
-  <h5>6. Do you always use a wifi network that's password-protected?</h5>
-  (<%= link_to " PC ", "http://windows.microsoft.com/en-us/windows/know-wireless-network-secure#1TC=windows-7"%>
-    |<%= link_to " Mac ", "https://support.apple.com/en-us/HT204070"%>)
-<br><br>
-    <select name="wifi">
-      <option value="0">Yes</option>
-      <option value="3">No</option>
-      <option value="2">I'm not sure</option>
-      <option value="2">I Use Dial-Up or an Ethernet Cord</option>
-      <option value="2">I don't know what wifi is</option>
-    </select>
-  </div><br><br><br><br><br>
-
-  <input type="submit" value="Submit">
-</form><br><br>
-
- -->

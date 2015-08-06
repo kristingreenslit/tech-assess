@@ -1,18 +1,21 @@
-<h1> Computer: <%= @computer.name %></h1>
+<h4> Computer Name:  <%= @computer.name %></h4>
 
-Score: <%= @computer.score %>
+<h4>Total Assessment Score: <%= @computer.score %></h4>
 
-<h2>
-  Assessments
-  <%= link_to "(+)", new_computer_assessment_path(@computer) %>
-</h2>
+<h4>(No Risk = Score: 0)</h4>
 
+<div id="assess_li">
 <ul>
   <% assessments =  @computer.assessments %>
   <% assessments.each do |assessment| %>
     <li>
-        <%= assessment.name %> |
+        <%= assessment.name%>
         <%= assessment.score %>
     </li>
   <% end %>
 </ul>
+</div>
+
+<h4>
+  <%= link_to "Back to Assessments", new_computer_assessment_path(@computer) %>
+</h4>

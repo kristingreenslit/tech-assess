@@ -28,15 +28,19 @@ h4 {
   font-size: 1em;
   margin-bottom: 20px;
 }
-.mac-os, .mac-off, .mac-password, .mac-cookies, .mac-backups, .mac-wifi {
+#new_assessment {
   /*border: 1px solid green;*/
-  font-size: .9em;
-  text-align: left;
-  width: 350px;
+  font-size: 1em;
+  text-align: center;
+  width: 500px;
   height: 50px;
   margin: 0 auto;
   padding-top: 10px;
   color: #666;
+  height: 100%;
+  width: 70%;;
+  background-color: #efefef;
+  padding: 5px 5px 5px 5px;
 }
 .field, .actions, {
   font-size: .9em;
@@ -67,7 +71,7 @@ h4 {
   border: 1px solid #cbcbcb;
   margin: 0 auto;
   width: 300px;
-  height: 300px;
+  height: 350px;
   background-color: #efefef;
   text-align: center;
 }
@@ -140,11 +144,14 @@ h4 {
   background-image:-webkit-linear-gradient(#fff, #f0f0f0);
 }
 
-/*#comp-add {
-  length: 200px;
-  width: 200px;
-  margin: 0 auto;
-}*/
+#assess_li li {
+  text-align: center;
+  margin-left: 33%;
+  background-color: #efefef;
+  width: 30%;
+  height: 35%;
+  padding: 10px 10px 10px 10px;
+}
 
 #error_explanation {  /*all error_explanations are to style error messages in devise.en.yml*/
   width: 298px;
