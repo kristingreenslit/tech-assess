@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :computers #dependent: :destroy
+  has_many :computers, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
     score += param[:pass]
     score += param[:cookies]
     score += param[:backups]
-    score += param[:wifi] 
+    score += param[:wifi]
     return score
   end
 #  @user.score
