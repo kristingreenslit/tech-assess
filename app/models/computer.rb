@@ -1,6 +1,6 @@
 class Computer < ActiveRecord::Base
   belongs_to :user
-  has_many :assessments
+  has_many :assessments, dependent: :destroy
 end
 
 def change
