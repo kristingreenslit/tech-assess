@@ -1,4 +1,5 @@
 class Computer < ActiveRecord::Base
+  ## these associations looks good
   belongs_to :user
   has_many :assessments, dependent: :destroy
 end
