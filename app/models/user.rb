@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+# quiz functionality is difficult. But I like where your head is at for this. Where would
+# you use this method, how would you store this data?
   def self.score(param)
     score = 0
     score += param[:osversion]

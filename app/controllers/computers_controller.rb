@@ -1,6 +1,9 @@
 class ComputersController < ApplicationController
 
   def index
+    # The problem with this database query is that if you're not logged in you
+    # can't utilize the site. So you should incorporate a before_action to authenticate a user
+    # before anyone can do any action in your controllers, they have to authenticate
    @computers = current_user.computers
   end
 

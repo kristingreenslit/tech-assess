@@ -13,5 +13,5 @@ Rails.application.routes.draw do
 
   resources :computers
   resources :assessments
-
+## resources looks good here!
 end
