@@ -19,7 +19,7 @@ class AssessmentsController < ApplicationController
 
   def create
     # fail params.inspect
-    # params = { assessment: { osversion: '5' }, utf8: true, controller:'assessments' ...}
+    # params = { assessment: { Operating_System_Version: '5' }, utf8: true, controller:'assessments' ...}
     # Note: see example param above to understand why we...
 
     assessment_name = params[:assessment].keys.first
@@ -37,7 +37,7 @@ class AssessmentsController < ApplicationController
 
   private
   def assessment_params
-    params.require(:assessment).permit(:name, :osversion, :shutoff, :pass, :cookies, :backups, :wifi)
+    params.require(:assessment).permit(:name, :Operating_System_Version, :Power_Off, :Startup_Login, :Browser_Cookies, :Data_Backup, :Wifi_Protection)
   end
 
 end
