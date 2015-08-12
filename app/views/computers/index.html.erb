@@ -5,12 +5,10 @@
       <li>
           <%= computer.name %>
           |
-          <%= link_to 'Assess', assessments_path %>
+          <%= link_to 'Assess', new_computer_assessment_path(computer) %>
           |
           <%= link_to 'Edit', edit_computer_path(computer) %>
           |
-          <% # Consider refactoring the code below to confirm the user's Remove request, %>
-          <% # but without a pop-up - i.e. flash message: http://bit.ly/1T0Zkbw%>
           <%= link_to 'Remove', computer, method: :delete, data: { confirm: 'Are you sure?' } %>
       </li>
     <% end %>

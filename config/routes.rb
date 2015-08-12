@@ -11,7 +11,8 @@ Rails.application.routes.draw do
 
 # resources :computers, only: [:index, :show]
 
-  resources :computers
-  resources :assessments
+  resources :computers do
+    resources :assessments
+  end
 
 end

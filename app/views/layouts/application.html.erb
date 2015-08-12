@@ -14,13 +14,14 @@
   			<li><a href="/">Home</a></li>
   			<!-- <li><a href="/">About</a></li> -->
   			<li><a href="mailto:kristin.promos@icloud.com">Contact</a></li>
-        <li><a href="/computers">My Assessments</a></li>
+        <li><a href="/computers">My Computers</a></li>
         <% if current_user %>
           <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
         <% end %>
   	  </ul>
   </div>
   <p class="notice" style="color:red"><%= notice %></p> <!-- added per devise instructions -->
+    <br>
   <p class="alert" style="color:red"><%= alert %></p> <!-- added per devise instructions -->
 
 <%= yield %>
