@@ -14,6 +14,15 @@ body {
  a:hover {color: #3297FD; text-decoration:none;}
  a:active {color: #3297FD; text-decoration:none;}
 
+ hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+ }
+h2 {
+  text-align: center;
+}
 h3 {
   /*border: 1px solid green;*/
   font-size: 2em;
@@ -43,7 +52,7 @@ h5 {
   padding-top: 10px;
   color: #666;
   height: 100%;
-  width: 70%;;
+  width: 85%;;
   background-color: #efefef;
   padding: 5px 5px 5px 5px;
 }

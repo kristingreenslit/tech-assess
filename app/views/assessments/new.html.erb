@@ -1,6 +1,27 @@
-<h4>Computer Assessment</h4>
+<h2>Computer Assessment</h2>
 
 <div id="new_assessment">
+
+    <%= form_for [@computer, @assessment] do |f| %>
+
+    <h4>2. When was the last time your computer was shut down (powered off)?</h4>
+      <h5><%= link_to "Information about power buttons", "http://pcsupport.about.com/od/termsp/g/powerbutton.htm", :target => "_blank" %></h5>
+      <h5><%= link_to "Overview of shutting down computers", "http://lifehacker.com/5940176/is-it-bad-to-shutdown-my-computer-regularly-or-leave-it-on-all-the-time", :target => "_blank" %></h5>
+      <h5><%= link_to "How to shut down a PC ", "http://windows.microsoft.com/en-us/windows-8/how-shut-down-turn-off-pc", :target => "_blank" %></h5>
+      <h5><%= link_to " How to shut down a Mac ", "https://support.apple.com/en-us/HT201150", :target => "_blank" %></h5>
+        <select name="assessment[Power_Off]">
+             <option value="0">Within the past 24 hours</option>
+             <option value="0">Within the past week</option>
+             <option value="2">Within the past month</option>
+             <option value="3">Sometime this year</option>
+             <option value="3">I'm not sure</option>
+             <option value="5">I don't know how to shut down my computer</option>
+          </select>
+      <p>
+        <%= f.submit %>
+      </p>
+      <br><hr><br>
+    <% end %>
 
   <%= form_for [@computer, @assessment] do |f| %>
 
@@ -26,28 +47,7 @@
     <p>
       <%= f.submit %>
     </p>
-    <br>
-  <% end %>
-
-  <%= form_for [@computer, @assessment] do |f| %>
-
-  <h4>2. When was the last time your computer was shut down (a.k.a. powered off)?</h4>
-    <h5><%= link_to "Information about power buttons", "http://pcsupport.about.com/od/termsp/g/powerbutton.htm", :target => "_blank" %></h5>
-    <h5><%= link_to "Overview of shutting down computers", "http://lifehacker.com/5940176/is-it-bad-to-shutdown-my-computer-regularly-or-leave-it-on-all-the-time", :target => "_blank" %></h5>
-    <h5><%= link_to "How to shut down a PC ", "http://windows.microsoft.com/en-us/windows-8/how-shut-down-turn-off-pc", :target => "_blank" %></h5>
-    <h5><%= link_to " How to shut down a Mac ", "https://support.apple.com/en-us/HT201150", :target => "_blank" %></h5>
-      <select name="assessment[Power_Off]">
-           <option value="0">Within the past 24 hours</option>
-           <option value="0">Within the past week</option>
-           <option value="2">Within the past month</option>
-           <option value="3">Sometime this year</option>
-           <option value="3">I'm not sure</option>
-           <option value="5">I don't know how to shut down my computer</option>
-        </select>
-    <p>
-      <%= f.submit %>
-    </p>
-    <br>
+    <br><hr><br>
   <% end %>
 
   <%= form_for [@computer, @assessment] do |f| %>
@@ -63,7 +63,7 @@
     <p>
       <%= f.submit %>
     </p>
-    <br>
+    <br><hr><br>
   <% end %>
 
   <%= form_for [@computer, @assessment] do |f| %>
@@ -82,12 +82,12 @@
     <p>
       <%= f.submit %>
     </p>
-    <br>
+    <br><hr><br>
   <% end %>
 
   <%= form_for [@computer, @assessment] do |f| %>
 
-  <h4>5. When was the last time you backed up the data (photos, contacts, documents, etc.) on your computer?</h4>
+  <h4>5. When is the last time you backed up the data (photos, documents, etc.) on your computer?</h4>
     <h5><%= link_to "What is a backup?", "https://en.wikipedia.org/wiki/Backup", :target => "_blank" %></h5>
     <h5><%= link_to "How to back up a PC", "https://support.microsoft.com/en-us/kb/971759", :target => "_blank" %></h5>
     <h5><%= link_to "How to back up a Mac", "https://www.apple.com/support/backup/", :target => "_blank" %></h5>
@@ -102,7 +102,7 @@
     <p>
       <%= f.submit %>
     </p>
-    <br>
+    <br><hr><br>
   <% end %>
 
   <%= form_for [@computer, @assessment] do |f| %>
