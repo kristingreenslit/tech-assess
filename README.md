@@ -1,4 +1,4 @@
-TechAssess is an open source project that was built to help computer users learn about computer maintenance. Topics such as safe browsing habits and installing operating system updates help users take steps towards data loss prevention, mechanical issue resolution and security improvements. Users are asked questions about their computer's health as well as how often maintenance steps are performed to assess their level of risk.
+TechAssess is an open source project that was built to help computer users learn about computer maintenance. Users are asked questions about their computer's health as well as how often maintenance steps are performed. Topics such as safe browsing habits and installing operating system updates help users understand the steps that need to be taken to help prevent data loss, resolve mechanical issues and improve security.
 
 Thanks for contributing and happy assessing!
 

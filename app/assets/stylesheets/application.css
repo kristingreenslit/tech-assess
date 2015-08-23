@@ -147,7 +147,9 @@ h5 {
   cursor: pointer;
   padding: 12px 38px 12px 43px;
   font-size: 16px;
+  font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
   font-family: helvetica, arial, sans-serif;
   font-weight: bold;
   width: 225px;
@@ -155,7 +157,9 @@ h5 {
   border: 1px solid #cbcbcb;
   background-color: #f0f0f0;
   border-radius: 3px;
-  background-image:-webkit-linear-gradient(#fff, #f0f0f0);
+  background-image: -webkit-linear-gradient(#fff, #f0f0f0);
+  background-image: -moz-linear-gradient(#fff, #f0f0f0);
+  background-image: linear-gradient(#fff, #f0f0f0);
 }
 
 #assess_li li {
