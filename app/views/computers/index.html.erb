@@ -1,6 +1,6 @@
 <div class = "comp-list">
 <br>
-  <ul>
+  <ul id="comp-li">
     <% @computers.each do |computer| %>
       <li>
           <%= computer.name %>
@@ -15,5 +15,5 @@
   </ul>
 <br>
 </div>
-<br>
-<h4><%=link_to "Add a Computer", new_computer_path %></h4>
+<br><br>
+<div id="btns-main"><%=link_to "Add a Computer", new_computer_path %></div>

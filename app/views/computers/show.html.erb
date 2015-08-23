@@ -5,7 +5,7 @@
 <h4>(No Risk = Score: 0)</h4>
 
 <div id="assess_li">
-<ul>
+<ul id="assess-li">
   <% assessments =  @computer.assessments %>
   <% assessments.each do |assessment| %>
     <li>
@@ -14,8 +14,5 @@
     </li>
   <% end %>
 </ul>
-</div>
-
-<h4>
-  <%= link_to "Back to Assessments", new_computer_assessment_path(@computer) %>
-</h4>
+</div><br><br>
+<div id="btns-main"><%= link_to "Back to Assessments", new_computer_assessment_path(@computer) %></div>

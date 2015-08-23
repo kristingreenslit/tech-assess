@@ -1,7 +1,7 @@
 <div class="comp-form"><br>
   <%= form_for @computer do |f| %>
     <p>
-      <%= f.label :name, "Please enter a name for your computer: " %><br>
+      <%= f.label :name, "Please enter a name for your computer: " %><br><br>
       <%= f.text_field :name %>
     </p>
     <p>
@@ -14,5 +14,5 @@
       <%= f.submit %>
     </p><br>
   <% end %>
-</div>
-  <h4><%=link_to "Back to My Computers", computers_path %></h4>
+</div><br><br>
+  <div id="btns-main"><%=link_to "Back to My Computers", computers_path %></div>
