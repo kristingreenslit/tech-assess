@@ -18,7 +18,7 @@ a:active {color: #3297FD; text-decoration:none;}
 
 #comp-li li {
   list-style: none;
-  margin-right: 40px;
+  margin-right: 40px; /* inheriting left-margin from list items for signin error */
 }
 
 #assess-li li {
