@@ -9,6 +9,7 @@ nav li {
 
 body {
  	font-family: "Droid Sans", sans-serif, helvetica, arial;
+  background-image: url("gray.jpg");
 }
 
 a:link {color: #666; text-decoration:none;}
@@ -23,6 +24,11 @@ a:active {color: #3297FD; text-decoration:none;}
 
 #assess-li li {
   list-style: none;
+  border: 1px solid black;
+}
+
+#create-items{
+  color: white;
 }
 
 hr {
@@ -33,6 +39,7 @@ background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 h2 {
   text-align: center;
+  color: white;
 }
 h3 {
   /*border: 1px solid green;*/
@@ -42,11 +49,13 @@ h3 {
   max-width: 960px;
   width: 350px;
   margin-top: 3%;
+  color: white;
 }
 h4 {
   text-align: center;
   font-size: 1em;
   margin-bottom: 20px;
+  /*color: white;*/
 }
 h5 {
   text-align: center;
@@ -160,7 +169,8 @@ h5 {
   margin-bottom: 2%;
 }
 #nav a {
-  color: gray;
+  /*color: gray;*/
+  color: white;
   font-size: .9em;
   /*text-transform: uppercase;*/
   font-weight: bold;
