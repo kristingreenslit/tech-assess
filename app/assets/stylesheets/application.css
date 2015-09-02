@@ -6,7 +6,7 @@
 
 body {
  	font-family: "Droid Sans", sans-serif, helvetica, arial;
-  background-image: url("gray.jpg");
+  background-image: image-url("gray.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
