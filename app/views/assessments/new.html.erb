@@ -1,14 +1,14 @@
 <h2>Computer Assessment</h2>
 
-<div id="new_assessment">
+<div id="new-assessment">
     <div id="question1">
       <%= form_for [@computer, @assessment] do |f| %>
 
-      <h4>1. When was the last time your computer was shut down (powered off)?</h4>
-        <h5><%= link_to "Information about power buttons", "http://pcsupport.about.com/od/termsp/g/powerbutton.htm", :target => "_blank" %></h5>
-        <h5><%= link_to "Overview of shutting down computers", "http://lifehacker.com/5940176/is-it-bad-to-shutdown-my-computer-regularly-or-leave-it-on-all-the-time", :target => "_blank" %></h5>
-        <h5><%= link_to "How to shut down a PC ", "http://windows.microsoft.com/en-us/windows-8/how-shut-down-turn-off-pc", :target => "_blank" %></h5>
-        <h5><%= link_to " How to shut down a Mac ", "https://support.apple.com/en-us/HT201150", :target => "_blank" %></h5>
+      <h5>1. When was the last time your computer was shut down (powered off)?</h5>
+        <h6><%= link_to "Information about power buttons", "http://pcsupport.about.com/od/termsp/g/powerbutton.htm", :target => "_blank" %></h6>
+        <h6><%= link_to "Overview of shutting down computers", "http://lifehacker.com/5940176/is-it-bad-to-shutdown-my-computer-regularly-or-leave-it-on-all-the-time", :target => "_blank" %></h6>
+        <h6><%= link_to "How to shut down a PC ", "http://windows.microsoft.com/en-us/windows-8/how-shut-down-turn-off-pc", :target => "_blank" %></h6>
+        <h6><%= link_to " How to shut down a Mac ", "https://support.apple.com/en-us/HT201150", :target => "_blank" %></h6>
           <select name="assessment[Power_Off]">
                <option value="0">Within the past 24 hours</option>
                <option value="0">Within the past week</option>
@@ -25,10 +25,10 @@
     </div>
   <%= form_for [@computer, @assessment] do |f| %>
 
-  <h4>2. Which operating system is installed on your computer?</h4>
-    <h5><%= link_to "What is an operating system?", "http://www.gcflearnfree.org/computerbasics/2", :target => "_blank" %></h5>
-    <h5><%= link_to "How to find operating system information on a PC ", "http://windows.microsoft.com/en-us/windows/which-operating-system", :target => "_blank" %></h5>
-    <h5><%= link_to " How to find operating system information on a Mac ", "https://support.apple.com/en-us/HT201260", :target => "_blank" %></h5>
+  <h5>2. Which operating system is installed on your computer?</h5>
+    <h6><%= link_to "What is an operating system?", "http://www.gcflearnfree.org/computerbasics/2", :target => "_blank" %></h6>
+    <h6><%= link_to "How to find operating system information on a PC ", "http://windows.microsoft.com/en-us/windows/which-operating-system", :target => "_blank" %></h6>
+    <h6><%= link_to " How to find operating system information on a Mac ", "https://support.apple.com/en-us/HT201260", :target => "_blank" %></h6>
       <select name="assessment[Operating_System_Version]">
           <option value="6">Windows 95</option>
           <option value="5">Windows 98</option>
@@ -52,8 +52,8 @@
 
   <%= form_for [@computer, @assessment] do |f| %>
 
-  <h4>3. When your computer starts does it require a login?</h4>
-    <h5><%= link_to "What is a login?", "https://en.wikipedia.org/wiki/Login", :target => "_blank" %></h5>
+  <h5>3. When your computer starts does it require a login?</h5>
+    <h6><%= link_to "What is a login?", "https://en.wikipedia.org/wiki/Login", :target => "_blank" %></h6>
       <select name="assessment[Startup_Login]">
           <option value="0">Yes</option>
           <option value="5">No</option>
@@ -68,9 +68,9 @@
 
   <%= form_for [@computer, @assessment] do |f| %>
 
-  <h4>4. When was the last time you cleared your browser cookies?</h4>
-    <h5><%= link_to "What is a browser?", "https://whatbrowser.org/", :target => "_blank"  %></h5>
-    <h5><%= link_to "What are browser cookies?", "http://www.pctools.com/security-news/what-are-browser-cookies/", :target => "_blank"  %></h5>
+  <h5>4. When was the last time you cleared your browser cookies?</h5>
+    <h6><%= link_to "What is a browser?", "https://whatbrowser.org/", :target => "_blank"  %></h6>
+    <h6><%= link_to "What are browser cookies?", "http://www.pctools.com/security-news/what-are-browser-cookies/", :target => "_blank"  %></h6>
       <select name="assessment[Browser_Cookies]">
         <option value="0">Within the past 24 hours</option>
             <option value="0">Within the past week</option>
@@ -87,10 +87,10 @@
 
   <%= form_for [@computer, @assessment] do |f| %>
 
-  <h4>5. When is the last time you backed up the data (photos, documents, etc.) on your computer?</h4>
-    <h5><%= link_to "What is a backup?", "https://en.wikipedia.org/wiki/Backup", :target => "_blank" %></h5>
-    <h5><%= link_to "How to back up a PC", "https://support.microsoft.com/en-us/kb/971759", :target => "_blank" %></h5>
-    <h5><%= link_to "How to back up a Mac", "https://www.apple.com/support/backup/", :target => "_blank" %></h5>
+  <h5>5. When is the last time you backed up the data (photos, documents, etc.) on your computer?</h5>
+    <h6><%= link_to "What is a backup?", "https://en.wikipedia.org/wiki/Backup", :target => "_blank" %></h6>
+    <h6><%= link_to "How to back up a PC", "https://support.microsoft.com/en-us/kb/971759", :target => "_blank" %></h6>
+    <h6><%= link_to "How to back up a Mac", "https://www.apple.com/support/backup/", :target => "_blank" %></h6>
       <select name="assessment[Data_Backup]">
           <option value="0">Within the past 24 hours</option>
           <option value="0">Within the past week</option>
@@ -106,10 +106,10 @@
   <% end %>
 
   <%= form_for [@computer, @assessment] do |f| %>
-    <h4>6. Do you always connect to a wifi network that's secure?</h4>
-      <h5><%= link_to "What is wifi (a.k.a. wireless internet)?", "http://www.explainthatstuff.com/wirelessinternet.html", :target => "_blank" %></h5>
-      <h5><%= link_to "How to connect to a secure wifi network on a PC", "http://windows.microsoft.com/en-us/windows/know-wireless-network-secure#1TC=windows-7", :target => "_blank" %></h5>
-      <h5><%= link_to "How to check to a secure wifi network on a Mac", "https://support.apple.com/en-us/HT204070", :target => "_blank" %></h5>
+    <h5>6. Do you always connect to a wifi network that's secure?</h5>
+      <h6><%= link_to "What is wifi (a.k.a. wireless internet)?", "http://www.explainthatstuff.com/wirelessinternet.html", :target => "_blank" %></h6>
+      <h6><%= link_to "How to connect to a secure wifi network on a PC", "http://windows.microsoft.com/en-us/windows/know-wireless-network-secure#1TC=windows-7", :target => "_blank" %></h6>
+      <h6><%= link_to "How to check to a secure wifi network on a Mac", "https://support.apple.com/en-us/HT204070", :target => "_blank" %></h6>
       <select name="assessment[Wifi_Protection]">
           <option value="0">Yes</option>
           <option value="3">No</option>

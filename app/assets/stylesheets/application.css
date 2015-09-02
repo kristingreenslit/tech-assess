@@ -3,13 +3,12 @@
 * {
   box-sizing: border-box;
 }
-nav li {
-  list-style: none;
-}
 
 body {
  	font-family: "Droid Sans", sans-serif, helvetica, arial;
   background-image: url("gray.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a:link {color: #666; text-decoration:none;}
@@ -25,6 +24,7 @@ a:active {color: #3297FD; text-decoration:none;}
 #assess-li li {
   list-style: none;
   border: 1px solid black;
+  color: black;
 }
 
 #create-items{
@@ -55,14 +55,15 @@ h4 {
   text-align: center;
   font-size: 1em;
   margin-bottom: 20px;
-  /*color: white;*/
+  color: white;
 }
 h5 {
   text-align: center;
   font-size: .8em;
   /*margin-left: 15%;*/
 }
-#new_assessment {
+
+#new-assessment {
   /*border: 1px solid green;*/
   border-radius: 3px;
   font-size: 1em;
@@ -88,6 +89,7 @@ h5 {
 }
 .comp-list, .comp-form {
   /*border: 1px solid green;*/
+  padding: 2px;
   border-radius: 3px;
   margin: 0 auto;
   text-align: center;
@@ -135,9 +137,17 @@ h5 {
   text-align: center;
 }
 #all-links {
-  /*border: 1px solid pink;*/
   font-size: .9em;
+  color: white;
 }
+#all-links a {
+  color: white;
+}
+
+#all-links h4 {
+  color: white;
+}
+
 .notice, .alert {
   margin: 0 auto;
   text-align: center;
@@ -158,7 +168,7 @@ h5 {
 #nav {
   /*border: 1px solid orange;*/
   text-align: center;
-  min-width: 360px;
+  /*min-width: 360px;*/
   margin-right: 4%;
 }
 #nav li {
@@ -166,7 +176,7 @@ h5 {
   list-style: none;
   display: inline-block;
   font-size: 1em;
-  margin-bottom: 2%;
+  /*margin-bottom: 2%;*/
 }
 #nav a {
   /*color: gray;*/
@@ -209,7 +219,7 @@ h5 {
   background-image: linear-gradient(#fff, #f0f0f0);
 }
 
-#assess_li li {
+#assess-items li {
   text-align: center;
   border-radius: 3px;
   margin-left: 33%;
@@ -244,4 +254,72 @@ h5 {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+
+@media only screen and (max-width: 850px){
+  #assess-li li {
+    width: 35%;
+    margin: 0 auto;
+    margin-left: 30%;
+  }
+}
+
+@media only screen and (max-width: 700px){
+
+  #nav {
+    width: 93%;
+    margin-right: 0;
+  }
+
+  #assess-li li {
+    width: 45%;
+    margin: 0 auto;
+    margin-left: 24%;
+  }
+
+  .comp-list {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 450px){
+
+  body {
+    font-size: 90%;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  li {
+    margin-bottom: 3%;
+  }
+
+  #assess-li li {
+    width: 65%;
+    margin: 0 auto;
+    margin-left: 11%;
+  }
+
+  #masthead {
+    width: 85%;
+  }
+
+  #btns-main {
+    width: 50%;
+    height: 50%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: .9em;
+  }
+
+  #start-button {
+    font-size: 1em;
+  }
+
+  .comp-list {
+    width: 85%;
+    font-size: 80%;
+  }
 }
