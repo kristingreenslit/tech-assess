@@ -82,6 +82,10 @@ background-image: linear-gradient(to right, #ccc, #333, #ccc);
   color: white;
 }
 
+#all-links a:hover {
+  color: #3297FD;
+}
+
 #all-links h4 {
   color: white;
 }
