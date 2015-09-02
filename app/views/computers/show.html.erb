@@ -4,6 +4,7 @@
   <h4>(No Risk = Score: 0)</h4>
 </div>
 
+<<<<<<< HEAD
 <div id="assess-items">
   <ul id="assess-li">
     <% assessments =  @computer.assessments %>
@@ -18,3 +19,21 @@
 <div id="btns-main" class="back-to-quiz">
   <%= link_to "Back to Assessments", new_computer_assessment_path(@computer) %>
 </div><br>
+=======
+<h4>Total Assessment Score: <%= @computer.score %></h4>
+
+<h4>(No Risk = Score: 0)</h4>
+
+<div id="assess_li">
+<ul id="assess-li">
+  <% assessments =  @computer.assessments %>
+  <% assessments.each do |assessment| %>
+    <li>
+        <%= assessment.name%>
+        <%= assessment.score %>
+    </li>
+  <% end %>
+</ul>
+</div><br><br>
+<div id="btns-main"><%= link_to "Back to Assessments", new_computer_assessment_path(@computer) %></div>
+>>>>>>> parent of b6e3345... index page text edits

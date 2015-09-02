@@ -3,14 +3,14 @@
   <ul id="comp-li">
     <% @computers.each do |computer| %>
       <li>
-          <%= computer.name %>:
-
+          <%= computer.name %>
+          |
           <%= link_to 'Assess', new_computer_assessment_path(computer) %>
           |
           <%= link_to 'Edit', edit_computer_path(computer) %>
           |
           <%= link_to 'Remove', computer, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </li><br>
+      </li>
     <% end %>
   </ul>
 <br>

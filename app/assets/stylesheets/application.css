@@ -16,6 +16,22 @@ a:visited {color: #666; text-decoration:none;}
 a:hover {color: #3297FD; text-decoration:none;}
 a:active {color: #3297FD; text-decoration:none;}
 
+/*#comp-li li {
+  list-style: none;
+  margin-right: 40px;
+}
+
+#assess-li li {
+  list-style: none;
+}
+
+hr {
+border: 0;
+height: 1px;
+background: #333;
+background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}*/
+
 h2 {
   text-align: center;
   color: white;
