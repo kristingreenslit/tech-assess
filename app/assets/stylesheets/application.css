@@ -9,37 +9,21 @@ html {
 }
 
 body {
- 	font-family: "Droid Sans", sans-serif, helvetica, arial;
-  background-image: url('/assets/gray.jpg');
+  font-family: "Droid Sans", sans-serif, helvetica, arial;
+  background-image: url('/assets/hydrangea.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #616367;
 }
 
-a:link {color: #666; text-decoration:none;}
-a:visited {color: #666; text-decoration:none;}
+a:link {color: #484848; text-decoration:none;}
+a:visited {color: #484848; text-decoration:none;}
 a:hover {color: #3297FD; text-decoration:none;}
-a:active {color: #3297FD; text-decoration:none;}
-
-#comp-li li {
-  list-style: none;
-  margin-right: 40px;
-}
-
-#assess-li li {
-  list-style: none;
-}
-
-hr {
-border: 0;
-height: 1px;
-background: #333;
-background-image: linear-gradient(to right, #ccc, #333, #ccc);
-}
+a:active {color: #484848; text-decoration:none;}
 
 h2 {
   text-align: center;
-  color: #eee;
+  color: #484848;
 }
 
 h3 {
@@ -49,14 +33,14 @@ h3 {
   max-width: 960px;
   width: 350px;
   margin-top: 3%;
-  color: #eee;
+  color: #484848;
 }
 
 h4 {
   text-align: center;
   font-size: 1em;
   margin-bottom: 20px;
-  color: #eee;
+  color: #484848;
 }
 
 h5 {
@@ -65,17 +49,29 @@ h5 {
 }
 
 hr {
-border: 0;
-height: 1px;
-background: #333;
-background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
+
+/*#assess-li {
+  max-height: 350px;
+  overflow-y: auto;
+}*/
 
 #assess-li li {
   list-style: none;
-  border: 1px solid black;
+/*  border: 1px solid #f9f9f9;*/
   color: black;
 }
+
+/*#assessment-background {
+  background-color: #616367;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-top: 20px;
+}*/
 
 #assessments {
   margin: 0 auto;
@@ -90,17 +86,17 @@ background-image: linear-gradient(to right, #ccc, #333, #ccc);
   margin: 0 auto;
   width: 300px;
   height: 350px;
-  background-color: #efefef;
+  background-color: #f9f9f9;
   text-align: center;
 }
 
 #all-links {
   font-size: .9em;
-  color: #eee;
+  color: #484848;
 }
 
 #all-links a {
-  color: #eee;
+  color: #484848
 }
 
 #all-links a:hover {
@@ -108,7 +104,7 @@ background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 #all-links h4 {
-  color: #eee;
+  color: #484848;
 }
 
 #assess-items li {
@@ -132,14 +128,14 @@ background-image: linear-gradient(to right, #ccc, #333, #ccc);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
   font-weight: bold;
-  width: 225px;
+  width: 235px;
   height: 45px;
   border: 1px solid #cbcbcb;
-  background-color: #f0f0f0;
+  background-color: #f9f9f9;
   border-radius: 3px;
-  background-image: -webkit-linear-gradient(#fff, #f0f0f0);
-  background-image: -moz-linear-gradient(#fff, #f0f0f0);
-  background-image: linear-gradient(#fff, #f0f0f0);
+  background-image: -webkit-linear-gradient(#fff, #f9f9f9);
+  background-image: -moz-linear-gradient(#fff, #f9f9f9);
+  background-image: linear-gradient(#fff, #f9f9f9);
 }
 
 #button1 {
@@ -160,7 +156,7 @@ background-image: linear-gradient(to right, #ccc, #333, #ccc);
 #error_explanation { /*all error_explanations are to style error messages in devise.en.yml*/
   width: 298px;
   border: 7px solid #c00;
-  background-color: #f0f0f0;
+  background-color: #f9f9f9;
 }
 
 #error_explanation h2 {
@@ -192,7 +188,7 @@ background-image: linear-gradient(to right, #ccc, #333, #ccc);
   margin-top: 15px;
   text-align: justify;
   font-size: .8em;
-  background-color: #efefef;
+  background-color: #f9f9f9;
   padding: 15px 20px 15px 20px;
 }
 
@@ -202,7 +198,7 @@ background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 #nav a {
-  color: #eee;
+  color: #484848;
   font-size: .9em;
   font-weight: bold;
   margin: 0;
@@ -225,14 +221,16 @@ background-image: linear-gradient(to right, #ccc, #333, #ccc);
   font-size: 1em;
   text-align: center;
   width: 500px;
-  height: 50px;
+  max-height: 400px;
+ /* height: 50px;*/
   margin: 0 auto;
   padding-top: 10px;
   color: #666;
   height: 100%;
   width: 85%;;
-  background-color: #efefef;
+  background-color: #f9f9f9;
   padding: 5px 5px 5px 5px;
+  overflow-y: auto;
 }
 
 #start-button {
@@ -249,11 +247,11 @@ background-image: linear-gradient(to right, #ccc, #333, #ccc);
   width: 225px;
   height: 45px;
   border: 1px solid #cbcbcb;
-  background-color: #f0f0f0;
+  background-color: #f9f9f9;
   border-radius: 3px;
-  background-image: -webkit-linear-gradient(#fff, #f0f0f0);
-  background-image: -moz-linear-gradient(#fff, #f0f0f0);
-  background-image: linear-gradient(#fff, #f0f0f0);
+  background-image: -webkit-linear-gradient(#fff, #f9f9f9);
+  background-image: -moz-linear-gradient(#fff, #f9f9f9);
+  background-image: linear-gradient(#fff, #f9f9f9);
 }
 
 .comp-list, .comp-form {
@@ -263,7 +261,7 @@ background-image: linear-gradient(to right, #ccc, #333, #ccc);
   text-align: center;
   height: 100%;
   width: 60%;
-  background-color: #efefef;
+  background-color: #f9f9f9;
 }
 
 .field, .actions {

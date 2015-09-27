@@ -2,6 +2,6 @@ TechAssess is an open source project that was built to help computer users learn
 
 Thanks for contributing and happy assessing!
 
-Link to hosted app: https://still-fjord-1613.herokuapp.com/
+Link to hosted app: http://www.techassess.me/
 
 Disclaimer: Please be advised that any information obtained through this site is provided for informational purposes only and is not intended to be a substitute for obtaining advice from a certified computer professional. Users are advised not to act upon the information contained within this project without seeking the service of a computer professional. This means please use the information obtained through this site responsibly - it is purely intended to help people by providing insight into their digital lives.
